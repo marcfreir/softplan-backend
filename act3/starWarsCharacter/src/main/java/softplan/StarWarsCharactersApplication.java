@@ -19,7 +19,6 @@ public class StarWarsCharactersApplication {
             // Get input from the user
             BufferedReader characterReader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Enter the Star Wars character: ");
-
             String characterName = characterReader.readLine();
 
             // Check for null, empty or blank input
@@ -42,7 +41,6 @@ public class StarWarsCharactersApplication {
 
             InputStreamReader input = new InputStreamReader(connection.getInputStream());
             BufferedReader bufferedReader = new BufferedReader(input);
-
 
             String output;
             while ((output = bufferedReader.readLine()) != null) {
