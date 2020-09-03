@@ -34,3 +34,5 @@ Tipo de Aplicação: Console application
 ##### O resultado será semelhante a imagem abaixo:
 <br />
 <div align="center"><img src="./_res/preview.png" alt="Star Wars CLI Preview" /></div>
+
+    *Obs.: Os exercícios fora feitos em inglês para manter a consistência conforme o exercício 1.
