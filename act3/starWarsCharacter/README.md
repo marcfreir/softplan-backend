@@ -1,9 +1,9 @@
 # <div align="center">SOFTPLAN</div>
 ### <div align="center">Exercício 3 – Consumindo API</div>
 
-```
+
 Crie um programa console em sua linguagem preferida para consumir o endpoint para recuperar informações sobre os personagens do start wars:
-```
+
 
 > https://swapi.dev/api/people/?search=anakin
 
