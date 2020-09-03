@@ -3,6 +3,7 @@ package softplan;
 import java.util.Scanner;
 
 public class Allocation implements Batch {
+
     @Override
     public int[] getFileSizes() {
 
@@ -19,8 +20,6 @@ public class Allocation implements Batch {
             fileInput[indexFileInput] = userFileInput;
         }
 
-
-        //return new int[0];
         return fileInput;
     }
 
