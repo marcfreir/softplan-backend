@@ -40,4 +40,4 @@ Tipo de Aplicação: API (post request)
 <div align="center"><img src="./_res/preview.png" alt="Star Wars CLI Preview" /></div>
 
 
-    *Obs.: Os exercícios fora feitos em inglês para manter a consistência conforme o exercício 1.
+    *Obs.: Os exercícios foram feitos em inglês para manter a consistência conforme o exercício 1.
