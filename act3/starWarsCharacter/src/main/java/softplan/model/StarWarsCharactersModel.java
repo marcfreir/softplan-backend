@@ -2,7 +2,7 @@ package softplan.model;
 
 public class StarWarsCharactersModel {
 
-    private static String urlAddress = "https://swapi.dev/api/people/?search=";;
+    private static String urlAddress = "https://swapi.dev/api/people/?search=";
     private String output;
 
     public static String getUrlAddress() {
@@ -14,7 +14,7 @@ public class StarWarsCharactersModel {
     }
 
     public void setUrlAddress(String urlAddress) {
-        this.urlAddress = urlAddress;
+        StarWarsCharactersModel.urlAddress = urlAddress;
     }
 
     public void setOutput(String output) {
