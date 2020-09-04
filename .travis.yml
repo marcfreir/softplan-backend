@@ -1,7 +1,5 @@
 language: java
-jdk:
-    - oraclejdk11
-    - openjdk11
+jdk: oraclejdk11
 
 before_install:
     - cd act2/value-with-tax
