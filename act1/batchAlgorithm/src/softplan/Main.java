@@ -24,7 +24,7 @@ public class Main {
         if (tapeSize < newTape) {
             tapeAmount++;
         }
-        System.out.println("The number of disk/tape for the given files is: " + tapeAmount);
+        System.out.println("The number of disk/tape for the given files is: " + tapeAmount + " disks");
 
     }
 }
