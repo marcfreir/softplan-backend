@@ -55,12 +55,18 @@ Tipo de Aplicação: Console application
 <br />
 <div align="center"><img src="./_res/preview.png" alt="Star Wars CLI Preview" /></div>
 
-    *Obs.: Os exercícios foram feitos em inglês para manter a consistência conforme o modelo do protótipo acima.
+<br />
+
+```
+*Obs.: Os exercícios foram feitos em inglês para manter a consistência conforme o modelo do protótipo acima.
+```
 
 <br />
 
-    **Outras Observações:
-    Conforme o valor dado da Saída: 2 (discos), o algorítmo implementado foi o conforme o modelo a seguir:
+```
+**Outras Observações:
+Conforme o valor dado da Saída: 2 (discos), o algorítmo implementado foi o conforme o modelo a seguir:
+```
 
 ```java
 public class YourClassNameHere {
