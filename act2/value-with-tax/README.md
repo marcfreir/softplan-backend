@@ -27,6 +27,7 @@ package softplan;
 IDE: IntelliJ IDEA
 API Client: Insomnia
 JDK: versão 11
+Framework: Spring Boot
 Tipo de Aplicação: API (post request)
 ```
 
