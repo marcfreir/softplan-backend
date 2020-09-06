@@ -13,7 +13,15 @@ public class Main {
         int newTape = tapeSize;
 
         for (int indexFile = 0; indexFile < fileList.length; indexFile++) {
-            tapeSize = tapeSize - fileList[indexFile];
+
+            if (tapeSize >= fileList[indexFile]) {
+                tapeSize = tapeSize - fileList[indexFile];
+            } else if (tapeSize < fileList[indexFile]) {
+
+                for (int tape = tapeSize; tape <= fileList[indexFile]; tape+=tapeSize) {
+                    tapeAmount++;
+                }
+            }
 
             if (tapeSize <= 0) {
                 tapeAmount++;
