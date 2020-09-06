@@ -34,6 +34,8 @@ Tipo de Aplicação: API (post request)
 * Entre com os valores para "tax" e "amount" em formato JSON.
 *Crie uma POST request com o endereço:
 > localhost:8080/valuewithtax
+ou no Heroku:
+>> https://value-with-tax.herokuapp.com/valuewithtax
 
 ##### O resultado será semelhante a imagem abaixo:
 <br />
