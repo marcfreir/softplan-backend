@@ -69,30 +69,51 @@ Conforme o valor dado da Saída: 2 (discos), o algorítmo implementado foi o con
 ```
 
 ```java
-public class YourClassNameHere {
+public class Main {
+
     public static void main(String[] args) {
-      
+
       int diskSize = 100;
       int newDisk = diskSize;
       int diskNum = 0;
       int[] fileList = {20, 30, 50, 10, 15};
-      
+
       for (int index = 0; index < fileList.length; index++) {
-        diskSize = diskSize - fileList[index];
-        
-          if (diskSize <= 0) {
-                      
+
+        if (diskSize >= fileList[index]) {
+
+          diskSize = diskSize - fileList[index];
+
+        } else if (diskSize < fileList[index]) {
+
+          for (int jindex = diskSize; jindex <= fileList[index]; jindex+=diskSize) {
+
             diskNum = diskNum + 1;
-            
+
+          }
+
+
+        }
+
+
+          if (diskSize <= 0) {
+
+            diskNum = diskNum + 1;
+
             diskSize = newDisk;
-            
+
           } 
       }
       if (diskSize < newDisk) {
+
         diskNum = diskNum + 1;
+
         System.out.println("Number of disks for the given files: " + diskNum);
+
       } else {
+
         System.out.println("Number of disks for the given files: " + diskNum);
+
       }
 
     }
@@ -104,31 +125,40 @@ public class YourClassNameHere {
 
 ```java
 public class Main {
+
     public static void main(String[] args) {
-      
+
       int diskSize = 100;
       int newDisk = diskSize;
       int diskNum = 0;
       int[] fileList = {20, 30, 50, 10, 15};
-      
+
       for (int index = 0; index < fileList.length; index++) {
+
         diskSize = diskSize - fileList[index];
+
         // Add 1 to the index
-        int fileAmount = index + 1;        
+        int fileAmount = index + 1;
+
           // Change the declaration
           if (fileAmount % 2 == 0) {
-                      
+
             diskNum = diskNum + 1;
-            
+
             diskSize = newDisk;
-            
-          } 
+
+          }
       }
       if (diskSize < newDisk) {
+
         diskNum = diskNum + 1;
+
         System.out.println("Number of disks for the given files: " + diskNum);
+
       } else {
+
         System.out.println("Number of disks for the given files: " + diskNum);
+
       }
 
     }
