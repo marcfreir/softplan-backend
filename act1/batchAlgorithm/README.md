@@ -66,102 +66,51 @@ Tipo de Aplicação: Console application
 ```
 **Outras Observações:
 Conforme o valor dado da Saída: 2 (discos), o algorítmo implementado foi o conforme o modelo a seguir:
-```
 
+**Para atender a limitação "É proibido colocar mais de  2 arquivos no mesmo disco.", o algorítmo indicado seria conforme o modelo a seguir:
+```
+# <h3 align="center">```*ALGORÍTMO CORRIGIDO (atendendo as especificações)*```</h3>
 ```java
 public class Main {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-      int diskSize = 100;
-      int newDisk = diskSize;
-      int diskNum = 0;
-      int[] fileList = {20, 30, 50, 10, 15};
+    int diskSize = 100;
+    int newDisk = diskSize;
+    int diskNum = 0;
+    int[] fileList = {20, 30, 50, 10, 15};
 
+    int temp;
+
+    //Sort the array in descending order
       for (int index = 0; index < fileList.length; index++) {
-
-        if (diskSize >= fileList[index]) {
-
-          diskSize = diskSize - fileList[index];
-
-        } else if (diskSize < fileList[index]) {
-
-          for (int jindex = diskSize; jindex <= fileList[index]; jindex+=diskSize) {
-
-            diskNum = diskNum + 1;
-
+        for (int jindex = index+1; jindex < fileList.length; jindex++) {
+          if(fileList[index] < fileList[jindex]) {
+            temp = fileList[index];
+            fileList[index] = fileList[jindex];
+            fileList[jindex] = temp;
           }
-
-
         }
-
-
-          if (diskSize <= 0) {
-
-            diskNum = diskNum + 1;
-
-            diskSize = newDisk;
-
-          } 
-      }
-      if (diskSize < newDisk) {
-
-        diskNum = diskNum + 1;
-
-        System.out.println("Number of disks for the given files: " + diskNum);
-
-      } else {
-
-        System.out.println("Number of disks for the given files: " + diskNum);
-
       }
 
+    //Now, read the reordered array
+    for (int index = 0; index < fileList.length; index++) {
+      for (int jindex = index+1; jindex < fileList.length; jindex++) {
+        if (fileList[index] + fileList[jindex] <= tapeSize) {
+          tapeAmount = tapeAmount + 1;
+          index++;
+          break;
+        }
+        if (fileList[index] == tapeSize) {
+          tapeAmount = tapeAmount + 1;
+          break;
+        }
+      }
     }
+
+    System.out.println("The number of disk/tape for the given files is: " + tapeAmount + " disks");
+
+  }
 }
 ```
 > Resultado: 2 discos
-
-    **Para atender a limitação "É proibido colocar mais de  2 arquivos no mesmo disco.", o algorítmo indicado seria conforme o modelo a seguir:
-
-```java
-public class Main {
-
-    public static void main(String[] args) {
-
-      int diskSize = 100;
-      int newDisk = diskSize;
-      int diskNum = 0;
-      int[] fileList = {20, 30, 50, 10, 15};
-
-      for (int index = 0; index < fileList.length; index++) {
-
-        diskSize = diskSize - fileList[index];
-
-        // Add 1 to the index
-        int fileAmount = index + 1;
-
-          // Change the declaration
-          if (fileAmount % 2 == 0) {
-
-            diskNum = diskNum + 1;
-
-            diskSize = newDisk;
-
-          }
-      }
-      if (diskSize < newDisk) {
-
-        diskNum = diskNum + 1;
-
-        System.out.println("Number of disks for the given files: " + diskNum);
-
-      } else {
-
-        System.out.println("Number of disks for the given files: " + diskNum);
-
-      }
-
-    }
-}
-```
-> Resultado: 3 discos
