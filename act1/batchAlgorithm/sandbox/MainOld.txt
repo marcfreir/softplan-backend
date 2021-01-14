@@ -10,8 +10,10 @@ public class Main {
 
         int[] fileList = allocation.getFileSizes();
         int tapeSize = allocation.getTapeSize();
+        int newTape = tapeSize;
 
-        int temp;
+        int count = 0;
+        int temp = 0;
 
         //Sort the array in descending order
         for (int index = 0; index < fileList.length; index++) {
@@ -24,7 +26,34 @@ public class Main {
             }
         }
 
-        //Now, read the reordered array
+        /*
+        for (int indexFile = 0; indexFile < fileList.length; indexFile++) {
+
+            if (tapeSize >= fileList[indexFile]) {
+                tapeSize = tapeSize - fileList[indexFile];
+                count = count + 1;
+            } else if (tapeSize < fileList[indexFile]) {
+                //for (int tape = tapeSize; tape <= fileList[indexFile]; tape+=tapeSize) {
+                    //tapeAmount++;
+                    //break;
+                //}
+                //--- new start
+                int tape = tapeSize;
+                if (tape <= fileList[indexFile]) {
+                    tapeAmount++;
+                    tape+=tapeSize;
+                }
+                //--- new end
+            }
+
+            if (tapeSize <= 0 || count == 2) {
+                tapeAmount++;
+                tapeSize = newTape;
+                count = 0;
+            }
+        }*/
+
+        //---new try
         for (int index = 0; index < fileList.length; index++) {
             for (int jindex = index+1; jindex < fileList.length; jindex++) {
                 if (fileList[index] + fileList[jindex] <= tapeSize) {
@@ -38,7 +67,11 @@ public class Main {
                 }
             }
         }
+        //--new try
 
+        //if (tapeSize < newTape) {
+            //tapeAmount++;
+        //}
         System.out.println("The number of disk/tape for the given files is: " + tapeAmount + " disks");
 
     }
