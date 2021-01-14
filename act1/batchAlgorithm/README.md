@@ -67,7 +67,8 @@ Tipo de Aplicação: Console application
 **Outras Observações:
 Conforme o valor dado da Saída: 2 (discos), o algorítmo implementado foi o conforme o modelo a seguir:
 
-**Para atender a limitação "É proibido colocar mais de  2 arquivos no mesmo disco.", o algorítmo indicado seria conforme o modelo a seguir:
+**Para atender a limitação "É proibido colocar mais de  2 arquivos no mesmo disco.", 
+o algorítmo indicado seria conforme o modelo a seguir:
 ```
 # <h3 align="center">```*ALGORÍTMO CORRIGIDO (atendendo as especificações)*```</h3>
 ```java
